@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface AuthorRepository extends JpaRepository <AuthorEntity, Integer> {
 
+    List<AuthorEntity> getQuoteByAuthorName(String authorName);
 }

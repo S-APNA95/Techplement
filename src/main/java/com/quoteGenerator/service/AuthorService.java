@@ -14,5 +14,6 @@ public interface AuthorService {
 
     List<AuthorEntity> getAllQuotes();
     AuthorEntity getRandomQuote();
+    List<AuthorEntity> getByAuthor(String authorName);
 
 }

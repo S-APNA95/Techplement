@@ -67,4 +67,9 @@ public class AuthorServiceImpl implements AuthorService {
         return authorEntityList.get(randomIndex);
     }
 
+    @Override
+    public List<AuthorEntity> getByAuthor(String authorName) {
+       return authorRepository.getQuoteByAuthorName(authorName);
+    }
+
 }

@@ -60,6 +60,11 @@ public class AuthorController {
        AuthorEntity randomQuotes =  authorService.getRandomQuote();
         return new ResponseEntity<>(randomQuotes, HttpStatus.OK);
     }
+    @GetMapping("/search")
+    public ResponseEntity<List<AuthorEntity>> getQuoteByAuthor(@RequestParam String authorName){
+       List<AuthorEntity> quotesByAuthor = authorService.getByAuthor(authorName);
+       return new ResponseEntity<>(quotesByAuthor, HttpStatus.OK);
+    }
 
     }
 
